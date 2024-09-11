@@ -1,0 +1,9 @@
+load("@rules_go//go:def.bzl", "nogo")
+
+nogo(
+    name = "nogo",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//analyzers/paralleltest",
+    ],
+)

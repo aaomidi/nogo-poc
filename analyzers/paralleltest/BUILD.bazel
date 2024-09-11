@@ -1,0 +1,12 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "paralleltest",
+    srcs = ["paralleltest.go"],
+    importpath = "github.com/aaomidi/nogo-poc/analyzers/paralleltest",
+    visibility = ["//visibility:public"],
+    deps = [
+        "@com_github_kunwardeep_paralleltest//pkg/paralleltest",
+        "@org_golang_x_tools//go/analysis",
+    ],
+)
